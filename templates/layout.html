@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inicio</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+
+  <body>
+    <div class="nav_info">
+      <h3>CODE/NARIO</h3>
+      <ul class="infohead">
+        <li>Ingeniería en Ciencias y Sistemas</li>
+      </ul>
+    </div>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li><a href="{% url 'modulo1' %}">Módulo 1 &#129299;</a></li>
+          <li><a href="{% url 'modulo2' %}">Módulo 2 &#129300;</a></li>
+          <li><a href="{% url 'modulo3' %}">Módulo 3 &#129327;</a></li>
+          <li><a href="{% url 'modulo4' %}">Módulo 4 &#129355;</a></li>
+          {% if request.user.is_authenticated %}
+          <li><a href="{% url 'usuarios:perfil' %}">Mi perfil: {{ request.user.username }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <p>CUNOR - 7a. calle 1-11 zona 6. Cobán, Alta Verapaz. Código Postal: 16001</p>
+        <br>
+        <p>&copy; Seminario de Sistemas I - Github: <a target="_blank" href="https://github.com/darth7ghost"> @darth7ghost</a></p>
+    </footer>
+    <!-- javascript -->
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>

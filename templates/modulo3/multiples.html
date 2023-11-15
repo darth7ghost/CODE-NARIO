@@ -1,0 +1,65 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo3' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Múltiples condiciones</h1>
+                <p>En Python y Java, puedes utilizar un if con múltiples condiciones utilizando operadores lógicos para combinar las condiciones. Esto te permite tomar decisiones basadas en varias condiciones a la vez.</p>
+                <br>
+                <h3>Python</h3>
+                <p>En Python, puedes usar los operadores lógicos and y or para combinar múltiples condiciones en un solo if.</p>
+                <ul class="lista">
+                    <li>El operador and se utiliza para verificar si todas las condiciones son verdaderas.</li>
+                    <li>El operador or se utiliza para verificar si al menos una de las condiciones es verdadera.</li>
+                </ul>
+                <p>Por ejemplo:</p>
+                <div class="code-python">
+                <pre>
+edad = 25
+tiene_licencia = True
+
+if edad >= 18 and tiene_licencia:
+    print("Puedes conducir un coche")
+else:
+    print("No puedes conducir un coche")</pre>
+                </div>
+                <p>En este ejemplo, estamos utilizando el operador and para evaluar dos condiciones simultáneamente: si la edad es mayor o igual a 18 y si la persona tiene una licencia. Si ambas condiciones son verdaderas, se ejecuta el primer bloque de código. Si alguna de las condiciones es falsa, se ejecuta el bloque de código dentro del else.</p>
+                <br>
+                <h3>Java</h3>
+                <p>En Java, se usan operadores lógicos como && (y) y || (o) para combinar múltiples condiciones dentro de un if.</p>
+                <ul class="lista">
+                    <li>El operador && se utiliza para verificar si todas las condiciones son verdaderas.</li>
+                    <li>El operador || se utiliza para verificar si al menos una de las condiciones es verdadera.</li>
+                </ul>
+                <br>
+                <div class="code-java">
+                    <pre>
+int edad = 25;
+boolean tieneLicencia = true;
+
+if (edad >= 18 && tieneLicencia) {
+    System.out.println("Puedes conducir un coche");
+} else {
+    System.out.println("No puedes conducir un coche");
+}</pre>
+                </div>
+                <p>En este caso, estamos utilizando && para evaluar ambas condiciones al mismo tiempo: si la edad es mayor o igual a 18 y si la persona tiene una licencia válida. Si ambas condiciones son verdaderas, se ejecuta el primer bloque de código. Si alguna de las condiciones es falsa, se ejecuta el bloque de código dentro del else.</p>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'anidados' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'for' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

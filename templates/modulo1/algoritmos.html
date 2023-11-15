@@ -1,0 +1,51 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo1' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">¿Algoritmos o logaritmos?</h1>
+                <p>
+                    Un algoritmo es un conjunto de instrucciones ordenadas y precisas diseñadas para resolver un problema o 
+                    llevar a cabo una tarea específica. En términos simples, es una serie de pasos lógicos y definidos que se 
+                    siguen para alcanzar un objetivo determinado. Los algoritmos son utilizados en diversos campos, 
+                    como la informática, las matemáticas, la ciencia, la ingeniería y muchas otras disciplinas.
+                </p>
+                <p>
+                    Los algoritmos pueden ser representados de diversas formas, como diagramas de flujo, pseudocódigo o lenguajes 
+                    de programación. Independientemente de cómo se representen, un algoritmo debe ser lo suficientemente claro y 
+                    preciso para que cualquier persona que lo siga pueda obtener el resultado deseado. 
+                    Además, los algoritmos suelen ser eficientes en términos de tiempo y recursos, ya que buscan resolver un problema 
+                    de la manera más óptima posible.
+                </p>
+                <p>
+                    En el campo de la informática, los algoritmos son esenciales para el desarrollo de software y la resolución de 
+                    problemas computacionales. Desde algoritmos simples, como los utilizados para ordenar una lista de elementos, 
+                    hasta algoritmos complejos utilizados en el procesamiento de imágenes, la inteligencia artificial y otros campos 
+                    avanzados, juegan un papel fundamental en el funcionamiento de la tecnología moderna.
+                </p>
+                <p>Aquí un enlace a YouTube para aprender más sobre qué eson los algoritmos:</p>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/EkObhToiseo"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'fundamentos' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'lenguajes' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

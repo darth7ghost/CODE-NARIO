@@ -1,0 +1,194 @@
+{% extends "layout.html"%}
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<section class="main">
+    <div class="content">
+        <br>
+        <div class="titulo" style="margin: 0 auto; padding: 20px;">
+            <h1 style="text-align: center;">¡Evalúa tus conocimientos!</h1>
+        </div>
+        <div class="instrucciones">
+            <p>Este es un cuestionaro para poder recomendarte un módulo de estudio según el nivel detectado.</p>
+            <p>Consta de 10 preguntas que van desde fácil a avanzado. Podrás realizar este cuestionario cada vez que lo creas necesario.</p>
+            <p>Al finalizar el cuestionario, te recomendaremos continuar tu repaso en algún módulo en específico según la nota obtenida.</p>
+            <p>Tus resultados obtenidos se irán almacenando cada vez que realices el cuestionario. Podrás verlos dando click en tu usuario.</p>
+        </div>
+        <div class="container">
+            <section class="section-quizz" id="p0">
+                <h4>1 - ¿Qué es un algoritmo?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p0" onclick="respuesta(0,this)"> Una serie de instrucciones ordenadas
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p0" onclick="respuesta(0,this)"> Una función matemática para hallar un exponente
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p0" onclick="respuesta(0,this)"> Operación matemática inversa a elevar un numero a la encima potencia
+                </label>
+            </section>
+            <section class="section-quizz" id="p1">
+                <h4>2 - ¿Cuál es el propósito principal del programa "Hola Mundo"?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p1" onclick="respuesta(1,this)"> Crear una conexión pública en una red
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p1" onclick="respuesta(1,this)"> Mostrar el mensaje "Hola Mundo" en la pantalla
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p1" onclick="respuesta(1,this)"> Ordenar una lista de palabras
+                </label>
+            </section>
+            <section class="section-quizz" id="p2">
+                <h4>3 - ¿Cuál es la función principal de los comentarios en el código?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p2" onclick="respuesta(2,this)"> Influenciar el comportamiento del programa
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p2" onclick="respuesta(2,this)"> Explicar o documentar el código para que sea más comprensible
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p2" onclick="respuesta(2,this)"> Darle estilos al código
+                </label>
+            </section>
+            <section class="section-quizz" id="p3">
+                <h4>4 - En programación, ¿qué significa la concatenación?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p3" onclick="respuesta(3,this)"> Dividir una cadena en partes más pequeñas
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p3" onclick="respuesta(3,this)"> Reemplazar caracteres en una cadena
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p3" onclick="respuesta(3,this)"> Unir dos o más cadenas para formar una más larga
+                </label>
+            </section>
+            <section class="section-quizz" id="p4">
+                <h4>5 - ¿Qué es la conversión de datos en programación?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> Cambiar un tipo de dato a otro, como de texto a número
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p4" onclick="respuesta(4,this)"> Organizar datos en una estructura de tabla
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p4" onclick="respuesta(4,this)"> Crear nuevos datos mediante operaciones matemáticas
+                </label>
+            </section>
+            <section class="section-quizz" id="p5">
+                <h4>6 - ¿Cuál es el propósito principal de una variable en programación?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p5" onclick="respuesta(5,this)"> Crear bucles y condicionales
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p5" onclick="respuesta(5,this)"> Mostrar mensajes en la consola
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p5" onclick="respuesta(5,this)"> Almacenar y manipular datos durante la ejecución del programa
+                </label>
+            </section>
+            <section class="section-quizz" id="p6">
+                <h4>7 - ¿Qué estructura de control se utiliza para repetir un bloque de código mientras se cumple una condición?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p6" onclick="respuesta(6,this)"> Condicional "if"
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p6" onclick="respuesta(6,this)"> Bucle "while"
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p6" onclick="respuesta(6,this)"> Bucle "for"
+                </label>
+            </section>
+            <section class="section-quizz" id="p7">
+                <h4>8 - En programación orientada a objetos, ¿qué es una clase?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p7" onclick="respuesta(7,this)"> Una instancia específica de un objeto
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p7" onclick="respuesta(7,this)"> Un plano o plantilla para crear objetos con atributos y métodos comunes
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p7" onclick="respuesta(7,this)"> Un tipo de dato que solo puede almacenar números
+                </label>
+            </section>
+            <section class="section-quizz" id="p8">
+                <h4>9 - ¿Cuál es la función principal de un "setter" en una clase?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p8" onclick="respuesta(8,this)"> Obtener valores de atributos
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p8" onclick="respuesta(8,this)"> Ejecutar métodos de la clase
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p8" onclick="respuesta(8,this)"> Configurar o actualizar el valor de un atributo
+                </label>
+            </section>
+            <section class="section-quizz" id="p9">
+                <h4>10 - ¿Qué hace el constructor de una clase y cómo afecta a la visibilidad de los atributos?</h4>
+                <label class="label-quizz">
+                    <input type="radio" value="1" name="p9" onclick="respuesta(9,this)"> Inicializa los atributos de la clase; los atributos pueden ser públicos, privados o protegidos
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="2" name="p9" onclick="respuesta(9,this)"> Define métodos especiales; los atributos son siempre privados
+                </label>
+                <label class="label-quizz">
+                    <input type="radio" value="3" name="p9" onclick="respuesta(9,this)"> Crea instancias de objetos; los atributos son siempre visibles solo dentro de la clase 
+                </label>
+            </section>
+            <br>      
+        </div>
+        <div class="quizz-btn">
+            <button class="boton" onclick="corregir()" id="enviar">Verificar</button>
+            <br><br>
+            <h3>Cantidad de aciertos: <span id="resultado"></span></h3>
+            <div id="reco">
+                <p><span id="recomendacion"></span></p>
+            </div>
+        </div>
+        <br>
+    </div>
+</section>
+
+<script>
+    //Funcion que compara los arreglos para saber cuántas estuvieron correctas
+    function corregir(){
+        cantidad_correctas = 0;
+        for(i=0; i<correctas.length; i++){
+            if(correctas[i] == opcion_elegida[i]){
+            cantidad_correctas++;
+            }
+        }
+
+    document.getElementById("resultado").innerHTML = cantidad_correctas;
+
+    if(cantidad_correctas == 0){
+        document.getElementById("recomendacion").innerHTML = "Recién estás comenzando, ¡es una excelente noticia!. Puedes ir al Módulo 1 para emprender tu camino en la programación.";
+    } else if (cantidad_correctas == 1 || cantidad_correctas == 2 || cantidad_correctas == 3){
+        document.getElementById("recomendacion").innerHTML = "Ya sabes algunos conceptos básicos de programación, ¡eso es excelente!. Puedes continuar repasando desde los módulos 2 al 3.";
+    } else if (cantidad_correctas == 4 || cantidad_correctas == 5 || cantidad_correctas == 6 || cantidad_correctas == 7){
+        document.getElementById("recomendacion").innerHTML = "Ya dominas la mayoría de fundamentos de programación, estás listo para algo más avanzado. Puedes dirigirte al Módulo 4.";
+    } else if (cantidad_correctas == 8 || cantidad_correctas == 9 || cantidad_correctas == 10){
+        document.getElementById("recomendacion").innerHTML = "Conoces desde lo básico hasta lo más avanzado de esta página web. Ya podrías especializarte en algún tipo de desarrollo, como web, escritorio, móvil, etc., ¡el límite es tu imaginación!";
+    }
+
+    const currentUrl = window.location.href;
+    console.log(currentUrl);
+
+    var data = {'cantidad_correctas': cantidad_correctas,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'};
+
+    var URL = "{% url 'send' %}";
+    $.post(URL, data, function(response){
+        if(response === 'success'){
+            console.log('Quizz enviado.');
+            }
+        else{ console.log('¡Algo salió mal!'); }
+    });
+
+    const button = document.getElementById("enviar");
+    button.disabled = true;
+
+    console.log(data);
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo1' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Editor de código vs. IDE</h1>
+                <p>
+                    Existen una amplia variedad de programas y entornos de programación disponibles para desarrolladores en la actualidad. Estos programas varían en función del lenguaje de programación que desees utilizar y el tipo de desarrollo que estés realizando
+                </p>
+                <p>
+                    Para el caso de Python usaremos un editor de código, y para Java usaremos un IDE. Pero, ¿qué son?
+                </p>
+                <h3>Editor de código:</h3>
+                <p>
+                    Un editor de código es una herramienta de software diseñada específicamente para escribir, editar y formatear código de programación. A diferencia de los procesadores de texto convencionales, los editores de código están optimizados para trabajar con lenguajes de programación, lo que significa que ofrecen características y funcionalidades específicas para facilitar la escritura y edición de código.
+                </p>
+                <h3>IDE:</h3>
+                <p>
+                    Un IDE, o Entorno Integrado de Desarrollo por sus siglas en inglés (Integrated Development Environment), es un software que proporciona a los desarrolladores una plataforma completa para escribir, editar, compilar, depurar y administrar su código de programación en un solo lugar. Un IDE es una herramienta que facilita el proceso de desarrollo de software al combinar varias funcionalidades y herramientas en una interfaz unificada.
+                </p>
+                <p>Aquí enlaces a YouTube para aprender a instalar las herramientas necesarias según el lenguaje que quieres aprender:</p>
+                <br>
+                <h3>Python:</h3>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/-IyA_Yvs8IQ"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java:</h3>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/MDAynv2107Q"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'lenguajes' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'hola_mundo' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

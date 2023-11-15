@@ -1,0 +1,35 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{ url 'modulo1' }">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Fundamentos de la programación</h1>
+                <p>
+                    Los fundamentos de la programación son las ideas y conceptos básicos que debes entender para escribir y crear programas de computadora. Es como aprender las reglas y herramientas esenciales para comunicarte con una computadora y decirle qué hacer.
+                </p>
+                <p>Ahora te dejamos un enlace a YouTube para aprender más sobre lenguajes de programación. En los próximos capítulos veremos algunos conceptos más detalladamente.</p>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/DJdBGf7uzg4"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'programacion' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'algoritmos' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

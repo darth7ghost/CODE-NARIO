@@ -1,0 +1,67 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo3' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Condicional if</h1>
+                <p>La condicional if se utiliza en Python y Java (y en muchos otros lenguajes de programación) para tomar decisiones en función de una condición. La idea básica es que si una cierta condición es verdadera, se ejecutará un bloque de código, y si es falsa, se puede ejecutar otro bloque de código o simplemente omitir ese bloque.</p>
+                <br>
+                <h3>Python</h3>
+                <p>En Python, la estructura básica de un if luce así:</p>
+                <div class="code-python">
+                    <pre>
+if condicion:
+    # Código a ejecutar si la condición es verdadera
+else:
+    # Código a ejecutar si la condición es falsa</pre>
+                </div>
+                <p>Por ejemplo, si queremos verificar si un número es positivo o no, podríamos hacerlo así:</p>
+                <div class="code-python">
+                    <pre>
+numero = 5
+if numero > 0:
+    print("El número es positivo")
+else:
+    print("El número no es positivo")</pre>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <p>En Java, la estructura de un if ligeramente diferente a la de Python:</p><div class="code-java">
+                    <pre>
+if (condicion) {
+    // Código a ejecutar si la condición es verdadera
+} else {
+    // Código a ejecutar si la condición es falsa
+}</pre>
+                </div>
+                <p>El mismo ejemplo en Java se vería así:</p>
+                <div class="code-java">
+                    <pre>
+int numero = 5;
+if (numero > 0) {
+    System.out.println("El número es positivo");
+} else {
+    System.out.println("El número no es positivo");
+}</pre>
+                </div>
+                <p>La diferencia principal es que en Java se utilizan paréntesis ( ) alrededor de la condición, y se usa System.out.println(...) para imprimir en lugar de print().</p>
+                <br>
+                <p>Encontrarás videos de ayuda en el siguiente tema.</p>
+                <br>
+                <div class="button-start">
+                    <a href="{% url 'elif' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo1' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">¿Qué es la programación?</h1>
+                <p>
+                    La programación es como darle instrucciones a una computadora para que haga lo que tú quieras. 
+                    Imagina que estás escribiendo una receta para hacer un pastel: en lugar de dar instrucciones a una persona, 
+                    estás dando instrucciones a la computadora. Pero en lugar de usar palabras en un idioma humano, 
+                    usas un lenguaje de programación, que es una forma especial de comunicarte con la máquina.
+                </p>
+                <p>
+                    Así, le estás indicando a la computadora qué pasos seguir, en qué orden y cómo hacerlo. 
+                    Luego, cuando ejecutas el programa, la computadora sigue esas instrucciones y realiza la tarea que le has dicho, 
+                    ya sea hacer cálculos, mostrar información en pantalla, jugar un juego, o muchas otras cosas que puedas imaginar.
+                </p>
+                <p>Aquí un enlace a YouTube para aprender más sobre qué es la programación:</p>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/aaj8ICk_Glc"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="button-start">
+                    <a href="{% url 'fundamentos' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo4' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Objetos</h1>
+                <p>En programación orientada a objetos, un objeto es una instancia o ejemplar de una clase. Una clase es como un plano o plantilla que define las propiedades (atributos) y acciones (métodos) que los objetos creados a partir de ella tendrán.</p>
+                <br>
+                <h3>Python</h3>
+                <div class="code-python">
+                    <pre>
+# Definición de una clase en Python
+class Coche:
+    # Constructor con atributos
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+        self.velocidad = 0
+
+    # Método para acelerar el coche
+    def acelerar(self, incremento):
+        self.velocidad += incremento
+        print(f"El coche aceleró a {self.velocidad} km/h")
+
+# Crear un objeto (instancia) de la clase Coche
+mi_coche = Coche(marca="Toyota", modelo="Corolla")
+
+# Acceder a los atributos y llamar a un método
+print(mi_coche.marca)
+mi_coche.acelerar(20)                        
+</pre>
+                </div>
+                <p>Te dejamos un video sobre las clases y objetos en Python para que puedas aprender más a detalle:</p>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/-E4O0mz-gGE"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <div class="code-java">
+                    <pre>
+// Definición de una clase en Java
+public class Coche {
+    // Atributos
+    String marca;
+    String modelo;
+    int velocidad;
+
+    // Constructor con parámetros
+    public Coche(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidad = 0;
+    }
+
+    // Método para acelerar el coche
+    public void acelerar(int incremento) {
+        this.velocidad += incremento;
+        System.out.println("El coche aceleró a " + this.velocidad + " km/h");
+    }
+
+    // Método principal (main) para probar la clase
+    public static void main(String[] args) {
+        // Crear un objeto (instancia) de la clase Coche
+        Coche miCoche = new Coche("Toyota", "Corolla");
+
+        // Acceder a los atributos y llamar a un método
+        System.out.println(miCoche.marca);
+        miCoche.acelerar(20);
+    }
+}
+</pre>
+                </div>
+                <p>Acá te dejamos un video sobre las clases y objetos en Java para que puedas aprender más a detalle:</p>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/fdfXkiuVHp4"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'clases' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'constructor' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Módulo 2 &#129300;</h1>
+                <p>
+                    En éste módulo comenzaremos a adentrarnos en los fundamentos de la programación y cómo ponerlos 
+                    en práctica para despertar esa lógica de programador que necesias.
+                </p>
+                <br>
+                <div class="plate">
+                    <a href="{% url 'variables' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Variables y tipos de datos</h4></li>
+                            <li>Introducción y primeros pasos.</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'concatenacion' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Concatenación</h4></li>
+                            <li>Lo sabemos, suena aburrido, pero con un poquito de imaginación no lo serán.</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'conversion'% }" class="ir-a">
+                        <ul>
+                            <li><h4>Conversión de datos</h4></li>
+                            <li>Lo sabemos, suena aburrido, pero con un poquito de imaginación no lo serán.</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'operadores' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Operadores</h4></li>
+                            <li>La definición de algoritmo es más fácil de lo que crees...</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'entrada' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Entrada de datos</h4></li>
+                            <li>¿Cómo solicitarle datos al usuario?</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <br>
+                <a href="#header-title" class="goto-start">[IR ARRIBA]</a><br>
+            </div>
+        </div>
+    </section>
+    <footer>
+{% endblock %}

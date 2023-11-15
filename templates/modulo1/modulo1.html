@@ -1,0 +1,94 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Módulo 1 &#129299;</h1>
+                <p>En este módulo comenzarás a dar tus primeros pasos en el mundo de la programación.</p>
+                <p>Comenzarás aprendiendo qué es la programaición, aclararemos la duda de si es realmente difícil 
+                    aprender a programar (ya te adelantamos que no lo es) y comenzarás a familiarizarte con nuevos 
+                    conceptos relacionados al mundo del desarrollo.
+                </p>
+                <p>
+                    Durante todo tu recorrido en esta guía, verás ejemplos de código en Python y Java, ya que son 
+                    los lenguajes que más verás y usarás a lo largo de la carrera de Ingeniería	en Ciencias y Sistemas, 
+                    y si eres un entusiasta novato... ¡qué mejor que ver una variedad de lenguajes a la vez!.
+                </p>
+                <p>¿Estás prepradado(a)? ¡MENTES A LA OBRA!</p>
+                <br>
+                <div class="plate">
+                    <a href="{% url 'programacion' %}" class="ir-a">
+                        <ul>
+                            <li><h4>¿Qué es la programación?</h4></li>
+                            <li>Introducción y primeros pasos.</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'fundamentos' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Fundamentos de la programación</h4></li>
+                            <li>Lo sabemos, suena aburrido, pero con un poquito de imaginación no lo serán.</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'algoritmos' %}" class="ir-a">
+                        <ul>
+                            <li><h4>¿Algoritmos?</h4></li>
+                            <li>La definición de algoritmo es más fácil de lo que crees...</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'lenguajes' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Lenguajes de programación</h4></li>
+                            <li>Qué son, y cómo aprenderlos.</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'ide_editor' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Editor de código vs. IDE</h4></li>
+                            <li>¿Cuál te conviene más?</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'hola_mundo' %}" class="ir-a">
+                        <ul>
+                            <li><h4>¡Hola mundo!</h4></li>
+                            <li>Tu primer programa, ¿no es emocionante?.</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate">
+                    <a href="{% url 'comentarios' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Comentarios</h4></li>
+                            <li>(De código), detalles de información que te pueden servir.</li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <br>
+                <a href="#header-title" class="goto-start">[IR ARRIBA]</a><br>
+            </div>
+        </div>
+    </section>
+{% endblock %}

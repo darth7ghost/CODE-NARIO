@@ -1,0 +1,70 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo2' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Conversión de datos</h1>
+                <p>La conversión de datos se refiere a cambiar el tipo de dato de una variable a otro tipo compatible. Tanto en Python como en Java, puedes realizar conversiones de datos de diversas maneras.</p>
+                <br>
+                <h3>Python</h3>
+                <p>Python es conocido por su flexibilidad en cuanto a la conversión de tipos de datos. Puedes realizar conversiones explícitas usando funciones específicas para cada tipo de dato. Aquí tienes algunos ejemplos:</p>
+                <p>Para convertir un número entero (int) a un número de punto flotante (float), puedes usar float():</p>
+                <div class="code-python">
+                    <pre>
+numero_entero = 5
+numero_float = float(numero_entero)</pre>
+                </div>
+                <p>Para convertir un número en forma de cadena (str) a un número entero (int) o de punto flotante (float), puedes usar int() o float() respectivamente:</p>
+                <div class="code-python">
+                    <pre>
+cadena_numero = "42"
+numero_entero = int(cadena_numero)
+numero_float = float(cadena_numero) </pre>
+                </div>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/xZUd2C8X7hU"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <p>En Java, las conversiones de datos se manejan de manera más explícita debido al tipado estático. Puedes realizar conversiones de tipos utilizando operadores o métodos específicos proporcionados por las clases de los tipos de datos. Aquí tienes algunos ejemplos:</p>
+                <p>Para convertir un número entero (int) a un número de punto flotante (float), puedes usar un casting explícito:</p>
+                <div class="code-java">
+                    <pre>
+int numeroEntero = 5;
+float numeroFloat = (float) numeroEntero;</pre>
+                </div>
+                <p>Para convertir una cadena (String) a un número entero (int) o de punto flotante (float), debes utilizar métodos de conversión proporcionados por las clases de los tipos de datos. Por ejemplo, para convertir una cadena en un entero:</p>
+                <div class="code-java">
+                    <pre>
+String cadenaNumero = "42";
+int numeroEntero = Integer.parseInt(cadenaNumero);</pre>
+                </div>
+                <p>Para convertir una cadena en un número de punto flotante, puedes usar Float.parseFloat() de manera similar.</p>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/C-SZqtyDeuU"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'concatenacion' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'operadores' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo2' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Entrada de datos</h1>
+                <p>La entrada de datos en Python y Java se utiliza para permitir que un programa obtenga información desde el usuario o desde una fuente externa.</p>
+                <br>
+                <h3>Python</h3>
+                <p>En Python, puedes utilizar la función input() para obtener datos ingresados por el usuario desde la consola. Esta función devuelve una cadena (string) que puedes convertir al tipo de dato que necesitas. Aquí un ejemplo:</p>
+                <div class="code-python">
+                    <pre>
+nombre = input("Por favor, ingresa tu nombre: ")  # Obtener una cadena (string) desde el usuario
+edad = int(input("Por favor, ingresa tu edad: "))  # Obtener un entero (int) desde el usuario
+
+print("Hola,", nombre)
+print("Tienes", edad, "años")</pre>
+                </div>
+                <p>En el ejemplo anterior, utilizamos input() para obtener el nombre como una cadena y la edad como un entero, utilizando int(input(...)) para convertir la entrada en un entero.</p>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/NdRodOkTNew"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <p>En Java, puedes utilizar la clase Scanner para obtener datos ingresados por el usuario desde la consola. Aquí tienes un ejemplo:</p>
+                <div class="code-java">
+                    <pre>
+import java.util.Scanner;  // Importar la clase Scanner
+public class EntradaDatos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);  // Crear un objeto Scanner
+
+        System.out.print("Por favor, ingresa tu nombre: ");
+        String nombre = scanner.nextLine();  // Obtener una cadena (string) desde el usuario
+
+        System.out.print("Por favor, ingresa tu edad: ");
+        int edad = scanner.nextInt();  // Obtener un entero (int) desde el usuario
+
+        System.out.println("Hola, " + nombre);
+        System.out.println("Tienes " + edad + " años");
+        
+        scanner.close();  // Cerrar el objeto Scanner al finalizar
+    }
+}</pre>
+                </div>
+                <p>En este ejemplo, creamos un objeto Scanner y lo usamos para obtener una cadena y un entero desde el usuario. Es importante cerrar el objeto Scanner cuando ya no lo necesites para liberar recursos.</p>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/9-expKIqcqY"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'concatenacion' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'modulo3' %}"><button class="next_module">MÓDULO 3 ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

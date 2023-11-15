@@ -1,0 +1,75 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo3' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Bucle for</h1>
+                <p>El bucle for es una estructura de control que repite un bloque de código un número predeterminado de veces o iteraciones.</p>
+                <br>
+                <h3>Python</h3>
+                <p>En Python, el bucle for se utiliza para iterar sobre una secuencia de elementos, como una lista, una tupla, una cadena de texto o un rango numérico. Aquí está la estructura básica:</p>
+                <div class="code-python">
+                    <pre>
+for elemento in secuencia:
+    # Código a ejecutar en cada iteración</pre>
+                </div>
+                <ul class="lista">
+                    <li>elemento: Es una variable que toma el valor de cada elemento de la secuencia en cada iteración.</li>
+                    <li>secuencia: Es la colección de elementos sobre la que deseas iterar.</li>
+                </ul>
+                <p>Ejemplo de bucle for en Python para imprimir números del 1 al 5:</p>
+                <div class="code-python">
+                    <pre>
+for numero in range(1, 6):
+    print(numero)</pre>
+                </div>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/PKp5XB3liC0"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <p>En Java, el bucle for se usa para iterar sobre una secuencia de elementos, pero su sintaxis es un poco diferente. Aquí está la estructura básica:</p><div class="code-java">
+                    <pre>
+for (inicialización; condición; actualización) {
+    // Código a ejecutar en cada iteración
+}</pre>
+                </div>
+                <ul class="lista">
+                    <li>inicialización: Se utiliza para inicializar una variable de control.</li>
+                    <li>condición: Es una expresión booleana que determina si el bucle debe continuar ejecutándose.</li>
+                    <li>actualización: Se usa para modificar la variable de control en cada iteración.</li>
+                </ul>
+                <p>Ejemplo de bucle for en Java para imprimir números del 1 al 5:</p>
+                <div class="code-java">
+                    <pre>
+for (int numero = 1; numero <= 5; numero++) {
+    System.out.println(numero);
+}</pre>
+                </div>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/V7U96RG6MPE"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'multiples' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'while' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

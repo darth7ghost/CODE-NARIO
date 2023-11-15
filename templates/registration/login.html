@@ -1,0 +1,15 @@
+{% extends "layout.html"%}
+{% block content %}
+<div class="main-login">
+    <div class="login-div">
+        <h1>Inicio de sesión</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="reg">Iniciar sesión</button>
+        </form>
+        <br>
+        <p>¿Aún no tienes una cuenta? » <a href="{% url 'signup' %}">Regístrate</a></p>
+    </div>
+</div>
+{% endblock %}

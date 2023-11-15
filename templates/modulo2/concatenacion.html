@@ -1,0 +1,69 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo2' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Concatenación</h1>
+                <p>La concatenación se refiere a la acción de unir o combinar cadenas de texto en programación. Tanto en Python como en Java, puedes concatenar cadenas de texto de manera sencilla.</p>
+                <br>
+                <h3>Python</h3>
+                <p>En Python, puedes concatenar cadenas de texto utilizando el operador +</p>
+                <div class="code-python">
+                    <pre>
+cadena1 = "Hola, "
+cadena2 = "mundo!"
+resultado = cadena1 + cadena2
+print(resultado)</pre>
+                </div>
+                <p>En este ejemplo, se crean dos variables cadena1 y cadena2, y luego se utilizan el operador + para concatenarlas en la variable resultado. Al imprimir resultado, obtendrás la cadena completa: "Hola, mundo!".</p>
+                <ul class="lista">
+                    <li>int: Números enteros (por ejemplo, 5).</li>
+                    <li>float: Números de punto flotante (por ejemplo, 3.14).</li>
+                    <li>str: Cadenas de texto (por ejemplo, "Hola, mundo").</li>
+                    <li>bool: Valores booleanos (True o False).</li>
+                </ul>
+                <br>
+                <div class="code-python">
+                    <pre>
+mi_numero = 5
+mi_texto = "Hola, mundo"</pre>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <p>En Java, puedes concatenar cadenas de texto utilizando el operador + o el método concat()</p>
+                <p>&nbsp;Usando el oprerador +</p>
+                <div class="code-java">
+                    <pre>
+String cadena1 = "Hola, ";
+String cadena2 = "mundo!";
+String resultado = cadena1 + cadena2;
+System.out.println(resultado);</pre>
+                </div>
+                <p>&nbsp;Usando el método concat()</p>
+                <div class="code-java">
+                    <pre>
+String cadena1 = "Hola, ";
+String cadena2 = "mundo!";
+String resultado = cadena1.concat(cadena2);
+System.out.println(resultado);</pre>
+                </div>
+                <p>En ambos casos, se crea una variable resultado que contiene la concatenación de cadena1 y cadena2. Al imprimir resultado, obtendrás la cadena completa: "Hola, mundo!".</p>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'variables' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'conversion' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

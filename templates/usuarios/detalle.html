@@ -1,0 +1,48 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </div>
+            <div class="info-content">
+                <h1>Perfil de {{usuario}}</h1>
+                <br>
+                <h4>Datos del usuario:</h4>
+                <p>Usuario: {{ usuario.username }}</p>
+                <p>Nombre: {{ usuario.first_name }}</p>
+                <p>Apellidos: {{ usuario.last_name }}</p>
+                <br>
+                <h3>Listado de Notas</h3>
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th>NO.</th>
+                                <th>Nota</th>
+                                <th>Fecha y hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for notas in nota %}
+                                {% if notas.usuario == usuario %}
+                                <tr>
+                                    <td>{{ forloop.counter }}.</td>
+                                    <td>{{ notas.nota }}&nbsp puntos</td>
+                                    <td>{{ notas.fecha_evaluacion }}</td>
+                                </tr>
+                                {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                <p>Fin del registro</p>
+                <br>
+                <a href="{% url 'usuarios:listado' %}" class="goto-start">Regresar al listado</a><br>
+            </div>
+        </div>
+    </section>
+    <footer>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo2' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Variables y tipos de datos</h1>
+                <p>Las variables y tipos de datos son conceptos fundamentales en la programación, tanto en Python como en Java.</p>
+                <br>
+                <h3>Python</h3>
+                <p>
+                    En Python, una variable es un contenedor que puedes usar para almacenar datos. Puedes crear una variable simplemente dando un nombre a la misma y asignándole un valor. Por ejemplo:
+                </p>
+                <div class="code-python">
+                    <pre>
+mi_variable = 42</pre>
+                </div>
+                <p>Python es un lenguaje de programación con tipado dinámico, lo que significa que no necesitas declarar explícitamente el tipo de dato de una variable. Algunos tipos de datos comunes en Python incluyen:</p>
+                <ul class="lista">
+                    <li>int: Números enteros (por ejemplo, 5).</li>
+                    <li>float: Números de punto flotante (por ejemplo, 3.14).</li>
+                    <li>str: Cadenas de texto (por ejemplo, "Hola, mundo").</li>
+                    <li>bool: Valores booleanos (True o False).</li>
+                </ul>
+                <br>
+                <div class="code-python">
+                    <pre>
+mi_numero = 5
+mi_texto = "Hola, mundo"</pre>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <p>En Java, las variables también son contenedores para almacenar datos. Debes declarar el tipo de variable y luego asignarle un valor. Por ejemplo:</p>
+                <div class="code-java">
+                    <pre>
+int miVariable = 42;</pre>
+                </div>
+                <p>Java es un lenguaje de tipado estático, lo que significa que debes declarar el tipo de dato de una variable antes de usarla. Algunos tipos de datos comunes en Java incluyen:</p>
+                <div class="lista">
+                    <li>int: Números enteros (por ejemplo, 5).</li>
+                    <li>double: Números de punto flotante de doble precisión (por ejemplo, 3.14).</li>
+                    <li>String: Cadenas de texto (por ejemplo, "Hola, mundo").</li>
+                    <li>boolean: Valores booleanos (true o false).</li>
+                </div>
+                <br>
+                <div class="code-java">
+                    <pre>
+int miNumero = 5;
+String miTexto = "Hola, mundo";</pre>
+                </div>
+                <br>
+                <div class="button-start">
+                    <a href="{% url 'concatenacion' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

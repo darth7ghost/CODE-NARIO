@@ -1,0 +1,74 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Módulo 3 &#129327;</h1>
+                <p>
+                    Este módulo es la continuación de módulo anterior. Seguiremos viendo fundamentos de la programación que te serán útiles en cada programa que realices.
+                </p>
+                <br>
+                <h2>Estructuras de control - CONDICIONALES</h2>
+                <div class="plate-2">
+                  <a href="{% url 'if' %}" class="ir-a">
+                      <ul>
+                          <li><h4>if</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <div class="plate-2">
+                  <a href="{% url 'elif' %}" class="ir-a">
+                      <ul>
+                          <li><h4>elif - else if</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <div class="plate-2">
+                  <a href="{% url 'anidados' %}" class="ir-a">
+                      <ul>
+                          <li><h4>ifs anidados</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <div class="plate-2">
+                  <a href="{% url 'multiples' %}" class="ir-a">
+                      <ul>
+                          <li><h4>Múltiples condiciones</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <h2>Estructuras de control - BUCLES</h2>
+                <div class="plate-2">
+                    <a href="{% url 'for' %}" class="ir-a">
+                        <ul>
+                            <li><h4>for</h4></li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate-2">
+                  <a href="{% url 'while' %}" class="ir-a">
+                      <ul>
+                          <li><h4>while</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+              </div>
+                <br>
+                <a href="#header-title" class="goto-start">[IR ARRIBA]</a><br>
+            </div>
+        </div>
+    </section>
+    <footer>
+{% endblock %}

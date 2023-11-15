@@ -1,0 +1,85 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo4' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">El constructor</h1>
+                <p>En programación orientada a objetos, un constructor es un método especial de una clase que se llama automáticamente cuando se crea un objeto de esa clase. Su función principal es inicializar los atributos del objeto.</p>
+                <br>
+                <h3>Python</h3>
+                <div class="code-python">
+                    <pre>
+# Definición de una clase en Python con un constructor
+class Persona:
+    # Constructor con atributos
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+# Crear un objeto (instancia) de la clase Persona usando el constructor
+nueva_persona = Persona(nombre="Juan", edad=25)
+
+# Acceder a los atributos del objeto
+print(nueva_persona.nombre)
+print(nueva_persona.edad)                                                
+</pre>
+                </div>
+                <p>Te dejamos un video sobre el constructor en Python para que puedas aprender más a detalle:</p>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/JrAlOREPhlo"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <div class="code-java">
+                    <pre>
+// Definición de una clase en Java con un constructor
+public class Persona {
+    // Atributos
+    String nombre;
+    int edad;
+
+    // Constructor con parámetros
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Método principal (main) para probar la clase
+    public static void main(String[] args) {
+        // Crear un objeto (instancia) de la clase Persona usando el constructor
+        Persona nuevaPersona = new Persona("Juan", 25);
+
+        // Acceder a los atributos del objeto
+        System.out.println(nuevaPersona.nombre);
+        System.out.println(nuevaPersona.edad);
+    }
+}                        
+</pre>
+                </div>
+                <p>Acá te dejamos un video sobre el constructor en Java para que puedas aprender más a detalle:</p>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/fdfXkiuVHp4"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'objetos' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'encapsulamiento' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

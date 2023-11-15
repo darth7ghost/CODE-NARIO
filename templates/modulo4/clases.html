@@ -1,0 +1,95 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo4' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Clases</h1>
+                <p>En programación orientada a objetos, las clases son como plantillas o moldes para crear objetos. Los objetos son instancias de una clase y pueden tener propiedades (llamadas atributos) y comportamientos (llamados métodos).</p>
+                <p>Verás que en los ejemplos que daremos a continuación ya incluimos elementos como objetos y constructores. No te preocupes, los cubriremos más a detalle en las siguientes lecciones.</p>
+                <br>
+                <h3>Python</h3>
+                <div class="code-python">
+                    <pre>
+# Definición de una clase en Python
+class Perro:
+    # Constructor con atributos
+    def __init__(self, nombre, raza):
+        self.nombre = nombre
+        self.raza = raza
+
+    # Método para imprimir información del perro
+    def imprimir_informacion(self):
+        print(f"Nombre: {self.nombre}, Raza: {self.raza}")
+
+# Crear un objeto (instancia) de la clase Perro
+mi_perro = Perro(nombre="Fido", raza="Labrador")
+
+# Acceder a los atributos y llamar a un método
+print(mi_perro.nombre)
+mi_perro.imprimir_informacion()
+</pre>
+                </div>
+                <p>Te dejamos un video sobre las clases en Python para que puedas aprender más a detalle:</p>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/9x7RK6mb1uA"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <div class="code-java">
+                    <pre>
+// Definición de una clase en Java
+public class Perro {
+    // Atributos
+    String nombre;
+    String raza;
+
+    // Constructor con parámetros
+    public Perro(String nombre, String raza) {
+        this.nombre = nombre;
+        this.raza = raza;
+    }
+
+    // Método para imprimir información del perro
+    public void imprimirInformacion() {
+        System.out.println("Nombre: " + nombre + ", Raza: " + raza);
+    }
+
+    // Método principal (main) para probar la clase
+    public static void main(String[] args) {
+        // Crear un objeto (instancia) de la clase Perro
+        Perro miPerro = new Perro("Fido", "Labrador");
+
+        // Acceder a los atributos y llamar a un método
+        System.out.println(miPerro.nombre);
+        miPerro.imprimirInformacion();
+    }
+}
+</pre>
+                </div>
+                <p>Acá te dejamos un video sobre las clases en Java para que puedas aprender más a detalle:</p>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/q9gZ9fjKIC0"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'poo' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'objetos' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

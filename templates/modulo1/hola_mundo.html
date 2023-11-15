@@ -1,0 +1,52 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo1' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">¡Hola mundo!</h1>
+                <p>
+                    "¡Hola mundo!" es un programa simple que se utiliza comúnmente como el primer ejemplo al aprender a programar en un nuevo lenguaje de programación. Su propósito es demostrar los conceptos básicos de cómo escribir y ejecutar un programa, así como familiarizar a los principiantes con la sintaxis básica de un lenguaje.
+                </p>
+                <p>
+                    El programa "Hola mundo" generalmente consiste en una sola línea de código que muestra el mensaje "Hola, mundo" en la salida del programa, que puede ser la consola, la ventana de salida de un IDE o cualquier otro medio de comunicación del programa con el usuario.
+                </p>
+                <p>
+                    Aquí tienes ejemplos de cómo se vería el programa "Hola, mundo" en Python y Java:
+                </p>
+                <br>
+                <h3>Python:</h3>
+                <div class="code-python">
+                    <pre>
+print("¡Hola, mundo!")</pre>
+                </div>
+                <h3>Java:</h3>
+                <div class="code-java">
+                    <pre>
+public class HolaMundo {
+    public static void main(String[] args) {
+        System.out.println("¡Hola, mundo!");
+    }
+}</pre>
+                </div>
+                <br>
+                <a href="#header-title" class="goto-start">[IR ARRIBA]</a><br>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'ide_editor' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'comentarios' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+{% endblock %}

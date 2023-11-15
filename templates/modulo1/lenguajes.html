@@ -1,0 +1,45 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo1' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Lenguajes de programación</h1>
+                <p>
+                    Los lenguajes de programación son como idiomas que utilizamos para comunicarnos con las computadoras. Imagina que estás enseñándole a alguien cómo hacer un sándwich. Puedes hacerlo en tu idioma, pero la computadora no entiende eso. En su lugar, usamos lenguajes de programación, que son conjuntos de reglas y palabras especiales que la computadora comprende.
+                </p>
+                <p>
+                    Cada lenguaje de programación tiene su propia forma de escribir instrucciones. Algunos son simples y fáciles de entender, mientras que otros son más poderosos y flexibles. Es como si tuvieras diferentes formas de hablar para diferentes situaciones. Los lenguajes de programación nos permiten decirle a la computadora qué hacer y cómo hacerlo para lograr tareas específicas, como jugar un juego, crear una página web o hacer cálculos complicados.
+                </p>
+                <p>
+                    Probablemente quieras aprender alguno de los lenguajes de programación más populares actualmente: Python o Java, en todo este recorrido verás ejemplos sobre estos dos lenguajes.
+                </p>
+                <p>Aquí un enlace a YouTube para aprender más sobre lenguajes de programación:</p>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/Rv910T1BJUw"> </iframe>
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/hPbvq7oe7dI"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'algoritmos' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'ide_editor' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+{% endblock %}

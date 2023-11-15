@@ -1,0 +1,41 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo4' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Programación Orientada a Objetos (POO)</h1>
+                <p>La Programación Orientada a Objetos (POO) es un enfoque de programación que se basa en el concepto de "objetos". Un objeto es una entidad que puede contener datos en forma de atributos y código en forma de métodos (funciones). La idea es modelar el mundo real en términos de objetos que interactúan entre sí.</p>
+                <br>
+                <p>Estos son conceptos claves de la POO (más adelante se explicarán más a detalle cada uno de ellos):</p>
+                <ul class="lista">
+                    <li><strong>Objetos</strong>: Son instancias específicas de una clase. Imagina una clase como un plano o plantilla que define cómo debería ser un objeto.</li>
+                    <li><strong>Clases</strong>: Son como los moldes para crear objetos. Definen las propiedades (atributos) y comportamientos (métodos) que los objetos de esa clase tendrán.</li>
+                    <li><strong>Atributos</strong>: Son características o datos que pertenecen a un objeto. Por ejemplo, si tienes una clase "Coche", un atributo podría ser el color.</li>
+                    <li><strong>Métodos</strong>: Son funciones que están asociadas con un objeto y pueden realizar acciones o manipular los atributos de ese objeto. Siguiendo el ejemplo del coche, un método podría ser "arrancar".</li>
+                    <li><strong>Encapsulamiento</strong>: Es el principio de agrupar datos (atributos) y los métodos que operan sobre esos datos en una sola unidad (objeto). Esto ayuda a organizar y estructurar el código.</li>
+                    <li><strong>Herencia</strong>: Permite que una clase herede propiedades y métodos de otra clase. Es como decir que una nueva clase es una versión especializada de otra.</li>
+                </ul>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/SI7O81GMG2A"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="button-start">
+                    <a href="{% url 'clases' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

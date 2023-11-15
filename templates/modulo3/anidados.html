@@ -1,0 +1,88 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo3' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">ifs anidados</h1>
+                <p>Los "ifs" anidados (también conocidos como estructuras de control if dentro de if) se utilizan en Python y Java para manejar condiciones más complejas donde una decisión depende de múltiples condiciones anidadas.</p>
+                <br>
+                <h3>Python</h3>
+                <p>En Python, la estructura anidada de un if quedaría así:</p>
+                <div class="code-python">
+<pre>
+if condicion1:
+    # Código a ejecutar si condicion1 es verdadera
+    if condicion2:
+        # Código a ejecutar si ambas condiciones son verdaderas
+    else:
+        # Código a ejecutar si condicion1 es verdadera, pero condicion2 es falsa
+else:
+    # Código a ejecutar si condicion1 es falsa</pre>
+                </div>
+                <p>Por ejemplo, si queremos verificar si un número es positivo, negativo o cero, pero también si es par o impar, podríamos hacerlo con ifs anidados:</p>
+                <div class="code-python">
+                    <pre>
+numero = 5
+if numero > 0:
+    print("El número es positivo")
+    if numero % 2 == 0:
+        print("El número es par")
+    else:
+        print("El número es impar")
+elif numero < 0:
+    print("El número es negativo")
+else:
+    print("El número es cero")</pre>
+                </div>
+                <p>Primero se verifica si el número es positivo y, si lo es, se verifica si es par o impar. Si no es positivo, se verifica si es negativo o cero.</p>
+                <br>
+                <h3>Java</h3>
+                <p>En Java, la estructura de un if anidado es así:</p><div class="code-java">
+                    <pre>
+if (condicion1) {
+    // Código a ejecutar si condicion1 es verdadera
+    if (condicion2) {
+        // Código a ejecutar si ambas condiciones son verdaderas
+    } else {
+        // Código a ejecutar si condicion1 es verdadera, pero condicion2 es falsa
+    }
+} else {
+    // Código a ejecutar si condicion1 es falsa
+}</pre>
+                </div>
+                <p>El mismo ejemplo en Java se vería así:</p>
+                <div class="code-java">
+                    <pre>
+int numero = 5;
+if (numero > 0) {
+    System.out.println("El número es positivo");
+    if (numero % 2 == 0) {
+        System.out.println("El número es par");
+    } else {
+        System.out.println("El número es impar");
+    }
+} else if (numero < 0) {
+    System.out.println("El número es negativo");
+} else {
+    System.out.println("El número es cero");
+}</pre>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'elif' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'multiples' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

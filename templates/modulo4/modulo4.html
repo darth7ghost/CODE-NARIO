@@ -1,0 +1,81 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Módulo 4 &#129355;</h1>
+                <p>
+                    ¡Genial! Ya te sabes los fundamentos y bases de la programación. Ahora las cosas se complican un poquito, pero nada que temer.
+                    Con paciencia y dedicación lograrás ser un maestro de la programación.
+                </p>
+                <br>
+                <div class="plate-2">
+                  <a href="{% url 'poo' %}" class="ir-a">
+                      <ul>
+                          <li><h4>¿Qué es la Programación Orientada a Objetos? (POO)</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <div class="plate-2">
+                  <a href="{% url 'clases' %}" class="ir-a">
+                      <ul>
+                          <li><h4>Clases</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <div class="plate-2">
+                  <a href="{% url 'anidados' %}" class="ir-a">
+                      <ul>
+                          <li><h4>Objetos</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <div class="plate-2">
+                  <a href="{% url 'multiples' %}" class="ir-a">
+                      <ul>
+                          <li><h4>El constructor</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <div class="plate-2">
+                    <a href="{% url 'for' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Encapsulamiento</h4></li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                </div>
+                <div class="plate-2">
+                  <a href="{% url 'while' %}" class="ir-a">
+                      <ul>
+                          <li><h4>Visibilidad de atributos</h4></li>
+                      </ul>
+                      <ul><li><h1>▸</h1></li></ul>
+                  </a>
+                </div>
+                <div class="plate-2">
+                    <a href="{% url 'while' %}" class="ir-a">
+                        <ul>
+                            <li><h4>Herencia</h4></li>
+                        </ul>
+                        <ul><li><h1>▸</h1></li></ul>
+                    </a>
+                  </div>
+                <br>
+                <a href="#header-title" class="goto-start">[IR ARRIBA]</a><br>
+            </div>
+        </div>
+    </section>
+    <footer>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo1' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Comentarios de código</h1>
+                <p>
+                    Los comentarios en el código son porciones de texto que los programadores escriben para explicar lo que hace una parte específica del código. Estos comentarios no se ejecutan ni afectan el funcionamiento del programa; son únicamente para que los humanos puedan entender mejor el propósito y la lógica detrás del código.
+                </p>
+                <p>
+                    Los comentarios son extremadamente útiles porque permiten a los programadores explicar su pensamiento y su enfoque mientras escriben código. Esto facilita la colaboración entre diferentes programadores y ayuda a recordar la intención detrás del código en el futuro.
+                </p>
+                <p>
+                    En la mayoría de los lenguajes de programación, los comentarios se marcan de manera especial para que la computadora los ignore durante la ejecución del programa. Por ejemplo, en Python, los comentarios de una línea comienzan con el símbolo <code>#</code>, y en muchos lenguajes, los comentarios multilínea se encierran entre <code>/*</code> y <code>*/</code>.
+                </p>
+                <p>
+                    Aquí tienes ejemplos de comentarios en Python y Java:
+                </p>
+                <br>
+                <h3>Python:</h3>
+                <div class="code-python">
+                    <pre>
+# Esto es un comentario de una línea en Python
+
+"""
+Este es un comentario
+de varias líneas
+en Python.
+"""</pre>
+                </div>
+                <h3>Java:</h3>
+                <div class="code-java">
+                    <pre>
+// Esto es un comentario de una línea en Java
+
+/*
+Este es un comentario
+de varias líneas
+en Java.
+*/</pre>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'hola_mundo' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'modulo2' %}"><button class="next_module">MÓDULO 2 ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

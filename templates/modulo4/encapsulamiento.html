@@ -1,0 +1,130 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo4' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Encapsulamiento</h1>
+                <p>El encapsulamiento es un concepto de la programación orientada a objetos que consiste en ocultar el estado interno de un objeto y restringir el acceso directo a sus atributos. Esto se logra mediante la definición de atributos como privados y proporcionando métodos públicos (llamados getters y setters) para acceder y modificar esos atributos.</p>
+                <br>
+                <h3>Python</h3>
+                <div class="code-python">
+                    <pre>
+# Definición de una clase en Python con encapsulamiento
+class Persona:
+    # Constructor con atributos privados
+    def __init__(self, nombre, edad):
+        self.__nombre = nombre
+        self.__edad = edad
+
+    # Métodos públicos para obtener y establecer el nombre
+    def get_nombre(self):
+        return self.__nombre
+
+    def set_nombre(self, nuevo_nombre):
+        self.__nombre = nuevo_nombre
+
+    # Métodos públicos para obtener y establecer la edad
+    def get_edad(self):
+        return self.__edad
+
+    def set_edad(self, nueva_edad):
+        if nueva_edad > 0:
+            self.__edad = nueva_edad
+
+# Crear un objeto (instancia) de la clase Persona
+nueva_persona = Persona(nombre="Juan", edad=25)
+
+# Acceder y modificar atributos utilizando métodos
+print(nueva_persona.get_nombre())
+nueva_persona.set_nombre("Carlos")
+print(nueva_persona.get_nombre())
+
+print(nueva_persona.get_edad())
+nueva_persona.set_edad(30)
+print(nueva_persona.get_edad())
+</pre>
+                </div>
+                <p>Te dejamos un video sobre el encapsulamiento en Python para que puedas aprender más a detalle:</p>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/zzSIfxyEYBc"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <div class="code-java">
+                    <pre>
+// Definición de una clase en Java con encapsulamiento
+public class Persona {
+    // Atributos privados
+    private String nombre;
+    private int edad;
+
+    // Constructor con parámetros
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Métodos públicos (getters) para obtener el nombre y la edad
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public int getEdad() {
+        return this.edad;
+    }
+
+    // Métodos públicos (setters) para establecer el nombre y la edad
+    public void setNombre(String nuevoNombre) {
+        this.nombre = nuevoNombre;
+    }
+
+    public void setEdad(int nuevaEdad) {
+        if (nuevaEdad > 0) {
+            this.edad = nuevaEdad;
+        }
+    }
+
+    // Método principal (main) para probar la clase
+    public static void main(String[] args) {
+        // Crear un objeto (instancia) de la clase Persona
+        Persona nuevaPersona = new Persona("Juan", 25);
+
+        // Acceder y modificar atributos utilizando métodos
+        System.out.println(nuevaPersona.getNombre());
+        nuevaPersona.setNombre("Carlos");
+        System.out.println(nuevaPersona.getNombre());
+
+        System.out.println(nuevaPersona.getEdad());
+        nuevaPersona.setEdad(30);
+        System.out.println(nuevaPersona.getEdad());
+    }
+}
+</pre>
+                </div>
+                <p>Acá te dejamos un video sobre el encapsulamiento en Java para que puedas aprender más a detalle:</p>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/ZHK0t5gocjA"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'constructor' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'herencia' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

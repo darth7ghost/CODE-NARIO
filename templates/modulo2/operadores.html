@@ -1,0 +1,113 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo2' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Operadores</h1>
+                <p>Los operadores en Python y Java son símbolos especiales que se utilizan para realizar operaciones en variables y valores.</p>
+                <br>
+                <h3>Python</h3>
+                <p>Operadores Aritméticos: Estos operadores se utilizan para realizar operaciones matemáticas básicas.</p>
+                <ul class="lista">
+                    <li>+ : Suma.</li>
+                    <li>- : Resta.</li>
+                    <li>* : Multiplicación.</li>
+                    <li>/ : División.</li>
+                    <li>% : Módulo (obtiene el resto de una división).</li>
+                    <li>** : Exponente (elevar a una potencia).</li>
+                </ul>
+                <br>
+                <div class="code-python">
+                    <pre>
+a = 5
+b = 2
+
+suma = a + b  # suma = 7
+resta = a - b  # resta = 3
+multiplicacion = a * b  # multiplicacion = 10
+division = a / b  # division = 2.5
+modulo = a % b  # modulo = 1
+exponente = a ** b  # exponente = 25</pre>
+                </div>
+                <p>Operadores de Comparación: Estos operadores se utilizan para comparar valores y devuelven un resultado booleano (True o False).</p>
+                <ul class="lista">
+                    <li>== : Igual a.</li>
+                    <li>!= : Diferente de.</li>
+                    <li>< : Menor que.</li>
+                    <li>> : Mayor que.</li>
+                    <li><= : Menor o igual que.</li>
+                    <li>>= : Mayor o igual que.</li>
+                </ul>
+                <br>
+                <div class="code-python">
+                    <pre>
+x = 5
+y = 10
+
+igual = x == y  # igual = False
+diferente = x != y  # diferente = True
+menor = x < y  # menor = True
+mayor = x > y  # mayor = False</pre>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <p>Java utiliza operadores similares a Python, aunque la sintaxis puede diferir un poco. Aquí están los operadores más comunes:</p>
+                <p>Operadores aritméticos:</p>
+                <ul class="lista">
+                    <li>+ : Suma.</li>
+                    <li>- : Resta.</li>
+                    <li>* : Multiplicación.</li>
+                    <li>/ : División.</li>
+                    <li>% : Módulo (obtiene el resto de una división).</li>
+                </ul>
+                <br>
+                <div class="code-java">
+                    <pre>
+int a = 5;
+int b = 2;
+
+int suma = a + b;  // suma = 7
+int resta = a - b;  // resta = 3
+int multiplicacion = a * b;  // multiplicacion = 10
+int division = a / b;  // division = 2
+int modulo = a % b;  // modulo = 1</pre>
+                </div>
+                <p>Operadores de comparación:</p>
+                <ul class="lista">
+                    <li>== : Igual a.</li>
+                    <li>!= : Diferente de.</li>
+                    <li>< : Menor que.</li>
+                    <li>> : Mayor que.</li>
+                    <li><= : Menor o igual que.</li>
+                    <li>>= : Mayor o igual que.</li>
+                </ul>
+                <br>
+                <div class="code-java">
+                    <pre>
+int x = 5;
+int y = 10;
+
+boolean igual = x == y;  // igual = false
+boolean diferente = x != y;  // diferente = true
+boolean menor = x < y;  // menor = true
+boolean mayor = x > y;  // mayor = false</pre>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'conversion' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="{% url 'entrada' %}"><button class="next">Siguiente ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

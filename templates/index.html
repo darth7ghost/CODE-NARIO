@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+    <div id="landing">
+      <div class="main-content">
+        {% if request.user.is_superuser %}
+        <br><br>
+            <div class="admin-panel">
+                <h3>Admin panel</h3>
+                <br>
+                <a href="{% url 'usuarios:listado' %}"><button class="admin-btn">Usuarios</button></a>
+            </div>
+        {% endif %}
+          <div class="tk-wrapper">
+              <div class="left-column">
+                  <img id="landing-logo" src="{% static 'images/codigo-binario.png' %}">
+              </div>
+              <div class="right-column">
+                  <div id="landing-buttons">
+                      <a id="blogbtn" href="{% url 'modulo1' %}"><button><h4>Comienza desde cero ▸</h4></button></a> <br>
+                      {% if request.user.is_authenticated %}
+                      <a id="blogbtn" href="{% url 'quizz' %}"><button><h4>¡Evalúa tus conocimientos!</h4></button></a> <br>
+                      <a id="empleobtn" href="{% url 'logout' %}"><button><h4>Cerrar sesión</h4></button></a>
+                      {% else %}
+                      <a id="empleobtn" href="{% url 'signup' %}"><button><h4>Registrarse</h4></button></a> <br>
+                      <a id="empleobtn" href="{% url 'login' %}"><button><h4>Iniciar sesión</h4></button></a>
+                      {% endif %}
+                  </div>
+              </div>
+          </div>
+      </div>
+      <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+            </div>
+            <div class="info-content">
+                <h1>Sobre nosotros</h1>
+                
+                <p>Este es un espacio virtual donde el mundo de la programación cobra vida de manera sencilla y accesible. 
+                    Somos un apasionado equipo de estudiantes universitarios que, guiados por la curiosidad y el deseo de compartir el conocimiento, 
+                    creamos esta página web tipo diccionario: "CODE/NARIO".
+                </p>
+                <p>
+                    La historia de esta página comenzó como un proyecto de seminario universitario. 
+                    Nos encontramos en búsqueda de una solución a una problemática presente en muchos estudiantes novatos 
+                    y aspirantes a la programación: la dificultad para acceder a recursos de aprendizaje comprensibles en internet.
+                </p>
+                <p>
+                    Nos propusimos crear un espacio donde cualquier persona interesada en aprender a programar pudiera encontrar explicaciones claras, 
+                    ejemplos intuitivos y un diseño acogedor para empezar su viaje en el mundo de la codificación. Trabajamos detalladamente para 
+                    describir conceptos y temas complejos en definiciones simples y amigables. Creemos que la programación es para todos, 
+                    sin importar el nivel de experiencia previa, y CODE/NARIO refleja esa convicción.
+                </p>
+                <p>Nuestro equipo de trabajo:</p>
+                <ul class="lista">
+                    <li>Mónica Alejandrina Caal Marroquín &nbsp 202040475</li>
+                    <li>Karen Gabriela Pacay Maas &nbsp &nbsp  &nbsp  &nbsp  &nbsp 202044760</li>
+                    <li>Oscar Anibal Sierra Chocooj &nbsp  &nbsp  &nbsp  &nbsp 201943148</li>
+                    <li>Victor Rodolfo Ramirez &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp200722155</li>
+                </ul>
+                <br>
+            </div>
+        </div>
+        </section>
+    </div>
+    
+{% endblock %}

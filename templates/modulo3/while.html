@@ -1,0 +1,80 @@
+{% extends "layout.html"%}
+{% block content %}
+    <section class="main">
+        <div class="content">
+            <div class="nav-wrapper">
+                <div class="dots-wrapper">
+                    <div id="dot-1" class="browser-dot"></div>
+                    <div id="dot-2" class="browser-dot"></div>
+                    <div id="dot-3" class="browser-dot"></div>
+                </div>
+                <ul id="navigation">
+                    <li><a href="{% url 'modulo3' %}">◀ Regresar</a></li>
+                </ul>
+            </div>
+            <div class="info-content">
+                <h1 class="header-title">Bucle while</h1>
+                <p>El bucle for es una estructura de control que repite un bloque de código hasta que una condición sea verdadera.</p>
+                <br>
+                <h3>Python</h3>
+                <p>Esta es la estructura básica en python:</p>
+                <div class="code-python">
+                    <pre>
+while condición:
+    # Código a ejecutar mientras la condición sea verdadera</pre>
+                </div>
+                <br>
+                <ul class="lista">
+                    <li>condición: Es una expresión booleana que determina si el bucle debe continuar ejecutándose.</li>
+                </ul>
+                <p>Ejemplo de bucle for en Python para imprimir números del 1 al 5:</p>
+                <div class="code-python">
+                    <pre>
+numero = 1
+while numero <= 5:
+    print(numero)
+    numero += 1</pre>
+                </div>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/rnUkxgJK4Qg"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <h3>Java</h3>
+                <p>Esta es la estructura básica en Java:</p><div class="code-java">
+                    <pre>
+while (condición) {
+    // Código a ejecutar mientras la condición sea verdadera
+}</pre>
+                </div>
+                <br>
+                <ul class="lista">
+                    <li>condición: Es una expresión booleana que determina si el bucle debe continuar ejecutándose.</li>
+                </ul>
+                <br>
+                <p>Ejemplo de bucle for en Java para imprimir números del 1 al 5:</p>
+                <div class="code-java">
+                    <pre>
+int numero = 1;
+while (numero <= 5) {
+    System.out.println(numero);
+    numero++;
+}</pre>
+                </div>
+                <br>
+                <div class="video-block">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/Vl9asbaZFZg"> </iframe>
+                    </div>
+                </div>
+                <br>
+                <div class="nav-buttons">
+                    <a href="{% url 'for' %}"><button class="prev">◀ Anterior</button></a>
+                    <a href="a{% url 'anidados' %}"><button class="next">MÓDULO 4 ▶</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
